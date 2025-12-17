@@ -1,12 +1,10 @@
 version: "3.8"
 
 services:
-  devstack:
-    build: .
-    image: proyectofinal-devstack:latest
-    container_name: devstack-container
+  proyecto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: emily06/proyecto1:ci
+    container_name: proyecto-test
     tty: true
-    stdin_open: true
-    working_dir: /workspace
-
-    command: ["tail", "-f", "/dev/null"]
