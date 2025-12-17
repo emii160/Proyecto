@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  devstack:
+    build: .
+    image: proyectofinal-devstack:latest
+    container_name: devstack-container
+    tty: true
+    stdin_open: true
+    working_dir: /workspace
+
+    command: ["tail", "-f", "/dev/null"]
